@@ -10,12 +10,12 @@ About the project:
 My angel with this projet is to both combine it with school and to use my knowledge to create a basic step by step page in the sale process when selling your apartment or house. I'm currently working as a broker and I figured that I could put my knowledge to use at my workplace also.
 
 The project consits of:
--- index.html is the main file where all the content is.
--- main.css: This is my own stylesheet for the project and whats controling the overall layout.
--- minjs.js: This is the file with my different javaScript and jQuery script is.
--- JavaScript: I have used javascript to build a slider, I also used the "onClick" function to change the content depending on wicht button you press. With JS I also created a simple validation script for my contact form.
--- jQuery: I have used jQuery for DOM manipulation. I used the function to slide in and out differens content. I have also used it to manipulate the css for all the "p" tags so when you mouseover them the color changes to red.
--- Bootstrap: I have worked with the grid system to get the page to be responsive, I have also used the build in style for nav-bar and buttons.
+<p>-- index.html is the main file where all the content is.</p>
+<p>-- main.css: This is my own stylesheet for the project and whats controling the overall layout.</p>
+<p>-- minjs.js: This is the file with my different javaScript and jQuery script is.</p>
+<p>-- JavaScript: I have used javascript to build a slider, I also used the "onClick" function to change the content depending on wicht button you press. With JS I also created a simple validation script for my contact form.</p>
+<p>-- jQuery: I have used jQuery for DOM manipulation. I used the function to slide in and out differens content. I have also used it to manipulate the css for all the "p" tags so when you mouseover them the color changes to red.</p>
+<p>-- Bootstrap: I have worked with the grid system to get the page to be responsive, I have also used the build in style for nav-bar and buttons.</p>
 
 I chose to make this site a "desktop first" with bootstrap it's also adjusted for both mobile and tablet devices.
 I'm satisfied with what I have created.
