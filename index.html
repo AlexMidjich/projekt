@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<!--
+För att projektet ska vara avklarat ska följande steg följas:
+- Ha en egen html, css och js fil - Klar (index.html, main.css och jquery.js)
+- Använda bootstrap till designen - Klar (Använt jumbotron, meny, knappar och gridsystemet)
+- Använda minst en media query lösning - Klar
+- Kompletera med egen css design utöver bootstrap - Klar (snyggat till sidan med en egen content class)
+- Använda jQuery till två olika saker. 
+- Ha minst en DOM manipulering med endast JS - Klar (knapparna för marknadsföring)
+- Ha med ett stylat formulär - Klar
+- Semantisk kod (Använda HTML5) - Klar (använder nav, section och footer istället för divar)
+- Genomtänkt design - Klar
+- Använda jQuery för att manipulera både DOMen, css och till någon effekt - Klar (Har mouseover effekt för alla "p"taggar & fadeIn/out)
+- Ha med minst en JS funktion e.g. slider, validering e.d. Ska göras antingen i jQuery eller ren JS - Klar
+- Sidan ska vara kompatibel med tre olika skärmstorlekar - Klar 
+-->
+  <head>
+	 <meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 <title>Projektarbete</title>
+	
+    <!--Länk hänvisning för bootstrap css filerna-->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+
+    <!--Egen css style-->
+	  <link rel="stylesheet" type="text/css" href="css/main.css">
+	
+    <!--Script för att få jQuery att fungera som det ska-->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--Script för att få bootstrap att fungera som det ska-->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	
+    <!--Egna script-->
+    <script src="js/minjs.js"></script>
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-default" id="nav-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">Mäklarföretaget</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html">Start</a></li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Steg för steg <b class="caret"></b></a>
+		      <ul class="dropdown-menu">
+			     <li><a href="#foto">Foto + homestyling</a></li>
+			     <li><a href="#marknad">Marknadsföring</a></li>
+			     <li><a href="#bank">Banksamarbeten</a></li>
+			     <li><a href="#aff">Hur går affären till</a></li>
+			     <li><a href="#efter">Efter affären</a></li>
+           <li><a href="#besikt">Besiktning, e.dekl och dolda fel</a></li>
+		      </ul></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>     
+
+    <section class="jumbotron">
+      <div class="container-fluid">
+        <div class="row text-center">
+          <h2>Din försäljning steg för steg</h2>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+    <section class="content">
+  
+      <!--Knapparna används för att visa olika steg beroende på om det är en br eller villa du är på-->    
+    <section id="img-center">   
+       <img src="img/hus.png" alt="villa" class="img-res" id="show">
+       <img src="img/lgh.png" alt="br" class="img-res" id="hide">
+       <h4>Välj mellan villa eller br</h4>
+    </section>
+
+    <!--Du ska kunna visa varje steg genom att trycka på bilderna de olika stegen-->			
+  	  <div class="row">
+  	    <div class="col-md-4 col-sm-6 col-xs-12">
+  		    <a href ="#foto" class="btn btn-primary btn-block br" id="steg">Foto + Homestyling</a>
+        </div>
+  	    <div class="col-md-4 col-sm-6 col-xs-12">
+  		    <a href ="#marknad" class="btn btn-primary btn-block br" id="steg">Marknadsföring</a>
+  	    </div>
+	      <div class="col-md-4 col-sm-6 col-xs-12">
+  	 	    <a href ="#bank" class="btn btn-primary btn-block br" id="steg">Banksamarbeten</a>
+  	    </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href ="#aff" class="btn btn-primary btn-block br" id="steg">Hur går affären till</a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href ="#efter" class="btn btn-primary btn-block br" id="steg">Efter affären</a>
+        </div>
+	      <div class="col-md-4 col-sm-6 col-xs-12">
+  		    <a href ="#besikt" class="btn btn-primary btn-block villa" id="steg">Besiktning, e.dekl och dolda fel</a>
+  	    </div>
+      </div>  
+  	  
+    
+	  <hr role="separator" class="divider">
+	
+
+	  <h3 id="foto">Professionell fotograf</h3>
+		  <img src="js/imgslide/stylads.jpg" name="DisplaySlide" class="slide-responsive">
+			<h4 id="text">Stylat på egen hand</h4>
+			<button class="btn btn-default" value="back" onclick="ShowSlides(-1)" onmouseover="style.backgroundColor = '#aaff80'" onmouseout="style.backgroundColor = '#ffffff'">Bakåt</button>
+			<button class="btn btn-default" value="forward" onclick="ShowSlides(+1)" onmouseover="style.backgroundColor = '#aaff80'" onmouseout="style.backgroundColor = '#ffffff'">Framåt</button><p><a href="#nav-top">Tillbaka till toppen</a></p>
+
+	
+	  <hr role="separator" class="divider">
+	
+	
+	  <h3 id="marknad">Marknadsföring</h3>
+      <div class="row">
+        <div class="col-md-6 col-sm-6 col-xs-12">
+          <img src="img/hemnet.png" class="img-responsive" alt="Responsive image" id="pics"  >
+        </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <h4 id="rubrik">Hemnet</h4>
+      </div>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <button class="btn btn-default btn-block" type="button" id="btn" onclick="hemnet()" onmouseover="style.backgroundColor = '#aaff80'" onmouseout="style.backgroundColor = '#ffffff'">Hemnet</button>
+        <button class="btn btn-default btn-block" type="button" id="btn2" onclick="blocket()" onmouseover="style.backgroundColor = '#aaff80'" onmouseout="style.backgroundColor = '#ffffff'">Blocket</button>
+        <button class="btn btn-default btn-block" type="button" id="btn3" onclick="aftonbladet()" onmouseover="style.backgroundColor = '#aaff80'" onmouseout="style.backgroundColor = '#ffffff'">Aftonbladet</button>
+        <button class="btn btn-default btn-block" type="button" id="btn4" onclick="hittaHem()" onmouseover="style.backgroundColor = '#aaff80'" onmouseout="style.backgroundColor = '#ffffff'">Hitta Hem</button>
+        <button class="btn btn-default btn-block" type="button" id="btn5" onclick="facebook()" onmouseover="style.backgroundColor = '#aaff80'" onmouseout="style.backgroundColor = '#ffffff'">Facebook</button>
+          <a href="#nav-top">Tillbaka till toppen</a></p>
+      </div>
+      
+
+      
+  <section class="content"> 
+
+  <hr role="separator" class="divider">
+  
+    <h3 id="bank">Banksamarbeten</h3>
+    <a href="#nav-top">Tillbaka till toppen</a></p>
+
+  <hr role="separator" class="divider">
+  
+    <h3 id="aff">Hur går affären till</h3>
+    <a href="#nav-top">Tillbaka till toppen</a></p>
+
+  <hr role="separator" class="divider">
+  
+    <h3 id="efter">Efter affären</h3>
+    <a href="#nav-top">Tillbaka till toppen</a></p>
+
+  <hr role="separator" class="divider">
+    
+    <h3 id="besikt" class="villa">Besiktning, e.dekl och dolda fel</h3>
+      <div class="row villa">
+      <div class="col-md-6 col-sm-6 col-xs-12">
+      <h4>Säljarbesiktning</h4>
+      <ul>
+        <li id="hover">Ockulär genomgång av din fastighet.</li>
+        <li id="hover">Trygghet för både dig som köper och säljer.</li>
+        <li id="hover">Kvalitetsstämpel för din försäljning.</li>
+        <li id="hover">Att göra en besiktning täcker en del av din upplysningsplikt.</li>
+        <li id="hover">Vi samarbetar med Independia och Svenska Besiktningshuset.</li>
+        <li id="hover">Ingår i alla våra försäljningar.</li>
+      </ul>
+      <h4>Energideklaration</h4>
+      <ul>
+        <li id="hover">Lagstadgat sedan 2009.</li>
+        <li id="hover">Visar bostadens energiförbrukning.</li>
+        <li id="hover">Gäller i 10 år från uppförandet.</li>
+      </ul>
+      <h4>Dolda fel försäkring</h4>
+      <ul>
+        <li id="hover">Enligt <a href="https://lagen.nu/1970:994" target="_blanck">jordabalken 4 kap 19§</a> har du som fastighetsägare ansvar för s.k. dolda fel upp till 10år</li>
+        <li id="hover">Tecknar du en försäkring i samband med besiktningen så har du ett skydd mot dolda fel.</li>
+        <li id="hover">Det finns tre olika nivåer på försäkringen att teckna.</li>
+      </ul>
+      <h4 id="besiktning_show">Ringmärkt<b class="caret"></b></h4>
+      <ul id="besiktning_hide">
+        <li id="hover">En paketprodukt som tillhandahålls via Mäklarringen.</li>
+        <li id="hover">Innehåller förutom överlåtelsebesiktning även dolda fel försäkring, trygg överlåtelseförsäkring (täcker skador på bl a vitvaror och värmesystem), utökad undersökning av VA och el samt utökad dolda fel försäkring.</li>
+        <li id="hover">Lägg till denna produkten för 12 000 kr.</li>
+        <hr role="separator" class="divider">   
+        <p>Dokument</p>
+        <p><a href="docs/ring.pdf" target="_blanck">Ringmärkt</a></p>
+        <p><a href="docs/trygg.pdf" target="_blanck">Trygg överlåtelseförsäkring</a></p>
+        <p><a href="docs/dold.pdf" target="_blanck">Dolda fel försäkring</a></p>
+        <p><a href="docs/jmf.pdf" target="_blanck">Jämförelse mot andra produkter</a></p>
+      </ul>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-12">
+        <p><img src="img/sbh.png" class="img-responsive" alt="Responsive image"> </p>
+        <p><img src="img/inde.png" class="img-responsive" alt="Responsive image"> </p>
+        <p><img src="img/nordic.png" class="img-responsive" alt="Responsive image"> </p>
+        <p><img src="img/ring.png" class="img-responsive" alt="Responsive image"> </p>
+      </div>
+      <a href="#nav-top">Tillbaka till toppen</a></p>
+      </div>    
+
+  <hr role="separator" class="divider">
+
+    <h3 id="kontakt">Kontakt</h3>
+      <form id="form_input" name="form" align="center">
+        <p><input class="txt_form" type="text" name="namn" placeholder="Namn"></p>
+        <p><input class="txt_form" type="text" name="post" placeholder="E-post"></p>
+        <p><input class="txt_form" type="text" name="tel" placeholder="Telefon"></p>
+        <p><textarea class="txt_box" name="message" name="med" placeholder="Meddelande"></textarea></p>
+        <p><input class="txt_form" list="agents" name="agents" placeholder="Välj mäklare">
+           <datalist id="agents">
+             <option value="Mäklare 1">
+             <option value="Mäklare 2">
+             <option value="Mäklare 3">
+           </datalist></p>
+        <button class="btn_form" value="submit" onclick="myFunction()">Skicka</button>
+        <p id="validation"></p>
+      </form>
+      <a href="#nav-top">Tillbaka till toppen</a></p>
+
+  </section>   
+	</section>
+  
+  
+  <footer>
+      
+        <p class="col-sm-4">&copy 2016 Alexander</p>
+       
+      
+  </footer>
+    </div>  
+  </body>  
+</html>

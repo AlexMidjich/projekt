@@ -1,0 +1,155 @@
+/*CSS mall för Alexander Midjichs projektarbete*/
+
+
+body {
+	background: #edeff0;
+
+		
+	}
+
+h2 {
+	font-size: 2.4em;
+	font-weight: 400;
+	margin-bottom: 8px;
+	color: #384047;
+	line-height: 1.2;
+}
+h3 {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+header nav {
+	display: flex;
+	justify-content: flex-end;
+}
+
+p {
+	color: #000000;
+	font-size: 1.0em;
+	margin-bottom: 10px;
+	line-height: 1.4;
+}
+
+.content {
+	box-sizing: border-box;
+	width: 90%;
+	max-width: auto;
+	background: #ffffff;
+	padding: 10px 15px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	border-radius: 5px;
+	-webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+/*CSS för jumbotronen*/
+.jumbotron {
+	display: flex;
+  	align-items: center;
+  	background-image: url("../img/jumbo.jpg");
+  	background-size: cover;
+  	color: #ffffff;
+  	width: 100%;
+  	height: 500px;
+  	text-shadow: 0.25px 0.25px 0.25px #000;
+}
+
+.jumbotron h2 {
+	font-size: 60px;
+	font-weight: 700;
+	margin: 0;
+	color: #fff;
+}
+
+.jumbotron h3 {
+	margin: 0 0 20px;
+	color: #fff;
+}
+
+/*Fixar bilderna för villa/br valet*/
+.img-res{
+	width: 15%;
+	max-height: 15%;
+	display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#img-center{
+    text-align:center;
+}
+
+#steg{
+	margin-top: 5px;
+	padding: 10px;
+}
+
+/*Sliden*/
+.slide-responsive {
+	width: 100%;
+	max-height: 100%;
+	padding-bottom: 20px;
+}
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 16px 11px;
+  font-size: 24px;
+  line-height: 1.33;
+  border-radius: 35px;
+}
+
+/*Marknadsföring*/
+
+#pics {
+	padding-bottom: 20px;
+}
+
+/*Besiktning*/
+#besiktning_hide{
+	display: none;
+}
+
+
+/*Kontaktformuläret*/
+.txt_form{
+	font-size: 100%;
+	border: 1px dotted;
+	width: 350px;
+	height: 35px;
+	border-radius: 10px;
+}
+.txt_box{
+	font-size: 100%;
+	border: 1px dotted;
+	width: 350px;
+	height: 75px;
+	border-radius: 10px;
+}
+
+.btn_form{
+	border: 1px;
+	border-radius: 10px;
+	width: 350px;
+	height: 30px;
+	background-color: #aaff80;
+}
+@media (max-width: 450px){
+.txt_form{
+	font-size: 12px;
+	width: 150px;
+}
+.txt_box{
+	font-size: 12px;
+	width: 150px;
+}
+
+.btn_form{
+	width: 150px;
+}
+}
+*/
