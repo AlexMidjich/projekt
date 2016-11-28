@@ -2,8 +2,8 @@
 <h2>A project in html, css, bootstrap, js and jQuery</h2>
 
 <b>Author:</b> Alexander Midjich
-<b>Project:</b> A school project to show our skills in HTML, css, bootstrap, js and jQuery. Part of our education plan from Lernia and our current course: html, css, javascript and web standards
-<b>Contact info:</b> alexander@midjich.se or <a href="https://www.linkedin.com/in/alexander-midjich-2031b751">LinkedIn</a>
+<p><b>Project:</b> A school project to show our skills in HTML, css, bootstrap, js and jQuery. Part of our education plan from Lernia and our current course: html, css, javascript and web standards</p>
+<p><b>Contact info:</b> alexander@midjich.se or <a href="https://www.linkedin.com/in/alexander-midjich-2031b751">LinkedIn</a></p>
 
 <h3>About the project:</h3>
 
